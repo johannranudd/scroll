@@ -1,0 +1,65 @@
+/* !core */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 110px;
+}
+
+/* !class and ID */
+
+.nav-bar {
+    background: #def;
+}
+
+.inner-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 90%;
+    margin: auto;
+    height: 70px;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.hamburger {
+    font-size: 25px;
+}
+
+.mobile-menu {
+    background: #fed;
+    height: 0;
+    overflow: hidden;
+}
+
+.mobile-menu a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+.mobile-menu a:hover {
+    background: white;
+}
+
+/* on click */
+
+.mobile-menu .show-mobile-menu {
+    height: 200px;
+}
