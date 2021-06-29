@@ -19,6 +19,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 a:focus {
@@ -40,10 +41,6 @@ img {
 /* !class and ID */
 
 .nav-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   background: white;
   z-index: 9;
 }
@@ -68,8 +65,8 @@ img {
 }
 
 .mobile-menu {
-  position: relative;
-  top: 70px;
+  /* position: relative;
+  top: 70px; */
   background: #fed;
   height: 0;
   overflow: hidden;
@@ -97,7 +94,59 @@ img {
   height: 180px;
 }
 
+
+/* hero */
+
+.hero {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(rgba(248, 70, 0, 0.288), rgba(0, 0, 0, 0.7)), 
+  url("https://images.unsplash.com/photo-1623265174181-4095a1a35702?ixid=MnwxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8&ixlib=rb-1.2.1&dpr=1&auto=format%2Ccompress&fit=crop&w=5399&h=594%201x,%20https://images.unsplash.com/photo-1623265174181-4095a1a35702?ixid=MnwxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8&ixlib=rb-1.2.1&dpr=2&auto=format%2Ccompress&fit=crop&w=5399&h=594%202x")
+    center/cover no-repeat;
+  height: 100vh;
+
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.reduce-hero-height {
+  height: 110vh;
+  top: 140px;
+}
+
+.hero-text-div {
+  max-width: 400px;
+  color: white;
+  text-align: center;
+}
+
+.hero-text-div h1 {
+  font-size: 3rem;
+}
+.hero-text-div p {
+  font-size: .8rem;
+  margin: 15px 0 40px;
+}
+.hero-text-div a {
+  font-size: 1.3rem;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+
 @media (min-width: 768px) {
+  .nav-bar {
+    background: transparent;
+    /* position: absolute;
+    top: 0; */
+  }
   .hamburger {
     display: none;
   }
@@ -112,30 +161,10 @@ img {
   .nav-menu a {
     transition: 1s;
   }
+
+  .hero {
+    position: absolute;
+    top: 0;
+  }
 }
 
-/* hero */
-
-.hero {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  right: 0;
-
-  background: linear-gradient(rgba(248, 70, 0, 0.288), rgba(0, 0, 0, 0.7)), 
-  url("https://images.unsplash.com/photo-1623265174181-4095a1a35702?ixid=MnwxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8&ixlib=rb-1.2.1&dpr=1&auto=format%2Ccompress&fit=crop&w=5399&h=594%201x,%20https://images.unsplash.com/photo-1623265174181-4095a1a35702?ixid=MnwxMjA3fDB8MHxwaG90by1vZi10aGUtZGF5fHx8fGVufDB8fHx8&ixlib=rb-1.2.1&dpr=2&auto=format%2Ccompress&fit=crop&w=5399&h=594%202x")
-    center/cover no-repeat;
-  height: 100vh;
-
-  z-index: -1;
-  transition: 0.4s;
-}
-
-.main-wrapper {
-  height: 100vh;
-}
-
-.reduce-hero-height {
-  height: 110vh;
-  top: 140px;
-}
