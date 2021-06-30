@@ -1,20 +1,23 @@
 const hamburger = document.querySelector(".hamburger");
-const mobileMenu = document.querySelector(".mobile-menu");
-const hero = document.querySelector(".hero");
 const navBar = document.querySelector(".nav-bar");
+const hero = document.querySelector(".hero");
 
 hamburger.addEventListener("click", function () {
-  mobileMenu.classList.toggle("show-mobile-menu");
-  hero.classList.toggle('reduce-hero-height')
+  navBar.classList.toggle("show-menu");
+  if (scrollY < 90) {
+    hero.classList.toggle('zoom-hero');
+  }
+  else {
+    hero.classList.remove('zoom-hero');
+  }
 });
 
-window.addEventListener("scroll", function () {
-  // console.log(scrollY);
+window.addEventListener("scroll", function() {
   if (scrollY > 90) {
     navBar.classList.add('fixed-bar');
-    mobileMenu.classList.add('scroll-mobile-menu');
   }
   else {
     navBar.classList.remove('fixed-bar');
   }
+
 })
